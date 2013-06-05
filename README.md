@@ -29,17 +29,17 @@ This will also give you a schema to work with for your scrape.
 Helpful Links
 -------------
 
-[Magic Cards Info](http://magiccards.info/)
-[Flask SQLAlchemy Plugin](http://pythonhosted.org/Flask-SQLAlchemy/)
-[SQLAlchemy Declarative Base](http://docs.sqlalchemy.org/en/rel_0_8/orm/extensions/declarative.html)
-[A List of Responsive Frameworks for HTML](http://komelin.com/en/5tips/5-most-popular-html5-responsive-frameworks)
-[jQuery API](http://api.jquery.com/)
-[pip](https://pypi.python.org/pypi/pip)
+* [Magic Cards Info](http://magiccards.info/)
+* [Flask SQLAlchemy Plugin](http://pythonhosted.org/Flask-SQLAlchemy/)
+* [SQLAlchemy Declarative Base](http://docs.sqlalchemy.org/en/rel_0_8/orm/extensions/declarative.html)
+* [A List of Responsive Frameworks for HTML](http://komelin.com/en/5tips/5-most-popular-html5-responsive-frameworks)
+* [jQuery API](http://api.jquery.com/)
+* [pip](https://pypi.python.org/pypi/pip)
 
 And some good things to know about writing Python:
-[PEP-8, a Style guide for Python](http://www.python.org/dev/peps/pep-0008/)
+* [PEP-8, a Style guide for Python](http://www.python.org/dev/peps/pep-0008/)
 
 And then if you are smart... you will use these.
-[PEP-8 Auto Checker](https://pypi.python.org/pypi/pep8)
-[PyFlakes](https://pypi.python.org/pypi/pyflakes)
-[JS Hint](http://www.jshint.com/)
+* [PEP-8 Auto Checker](https://pypi.python.org/pypi/pep8)
+* [PyFlakes](https://pypi.python.org/pypi/pyflakes)
+* [JS Hint](http://www.jshint.com/)
