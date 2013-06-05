@@ -1,9 +1,9 @@
-Engineering Hiring Project
+Engineering Project
 ==========
 
 The project is divided into two levels, the second level simply adding to the difficulty of the first one. Perform the minimum level for the position sought but feel free to perform the other level if you so desire.
 
-Software Engineering Intern or Jr. Software Engineer:
+Software Engineering Intern or Jr. Software Engineer
 -------------
 
 Using [Flask](http://flask.pocoo.org/) create an application that retrieves magic cards from a database and displays the following information on the screen:
@@ -33,6 +33,7 @@ Helpful Links
 * [Flask SQLAlchemy Plugin](http://pythonhosted.org/Flask-SQLAlchemy/)
 * [SQLAlchemy Declarative Base](http://docs.sqlalchemy.org/en/rel_0_8/orm/extensions/declarative.html)
 * [A List of Responsive Frameworks for HTML](http://komelin.com/en/5tips/5-most-popular-html5-responsive-frameworks)
+* [Testing Flask](http://flask.pocoo.org/docs/testing/)
 * [jQuery API](http://api.jquery.com/)
 * [pip](https://pypi.python.org/pypi/pip)
 
@@ -43,3 +44,11 @@ And then if you are smart... you will use these.
 * [PEP-8 Auto Checker](https://pypi.python.org/pypi/pep8)
 * [PyFlakes](https://pypi.python.org/pypi/pyflakes)
 * [JS Hint](http://www.jshint.com/)
+
+Requirements
+-------------
+
+Flask 0.9
+SQLAlchemy 0.7.9
+Flask-SQLAlchemy 0.16
+
