@@ -48,7 +48,7 @@ And then if you are smart... you will use these.
 Requirements
 -------------
 
-Flask 0.9
-SQLAlchemy 0.7.9
-Flask-SQLAlchemy 0.16
+* Flask 0.9
+* SQLAlchemy 0.7.9
+* Flask-SQLAlchemy 0.16
 
