@@ -13,6 +13,8 @@ Using [Flask](http://flask.pocoo.org/) create an application that retrieves magi
 * The card flavor text.
 * Any other fields you feel would make your application stand out from the others.
 
+![Llanowar Elves](https://dl.dropboxusercontent.com/u/3419979/Screen%20Shot%202013-05-30%20at%2011.05.08%20AM.png)
+
 If you are seeking this level, a flask skeleton application will be provided for you but you must make it actually return the data that you need from the search parameters sent by the user.
 
 The information must be pulled from the flask backend using jQuery and AJAX and the DOM must be built using jQuery.
