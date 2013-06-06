@@ -11,7 +11,11 @@ from models import Card, Edition
 @app.route("/")
 def index():
     # An example of accessing a card by name and returning the first result.
-    # card = db.session.query(Card).filter(Card.name == 'Naturalize').first()
-
+    #card = db.session.query(Card).filter(Card.name == 'Llanowar Elves').first()
+    card = db.session.query(Card).filter(Card.name == 'Naturalize').first()
+    
     # You will need to serve something up here.
-    return render_template('index.html')
+    return render_template('index.html',
+            title = 'Home',
+            card = card,
+            abilities = eval(card.abilities))

@@ -1,15 +1,13 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Some sort of title?</title>
-  <meta name="description" content="What is this?">
-  <meta name="author" content="Who?">
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-</head>
-<body>
-    <p>Your server is working.</p>
-</body>
-</html>
+{% extends "base.html" %}
+{%block content %}
+<div>
+    <p><img src={{card.image_url}} style="float:left"/></p>
+    <p>
+        <h1>{{card.name}}</h1><br>
+        {% for ability in abilities %}
+        <b>{{ability}}</b><br>
+        {% endfor %}
+        {{card.flavor_text}}
+    </p>
+</div> 
+{% endblock %}

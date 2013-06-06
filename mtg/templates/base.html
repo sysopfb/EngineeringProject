@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    {% if title %}
+    <title>{{title}} - MTG</title>
+    {% else %}
+    <title>MTG</title>
+    {% endif %}
+    <meta name="Magic The Gathering" content="MTG Database">
+    <meta name="Jason Reaves" content="IWS Software Engineer Intern Applicant">
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    {% block content %}{% endblock %}
+</body>
+</html>
