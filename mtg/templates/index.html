@@ -1,13 +1,23 @@
 {% extends "base.html" %}
 {%block content %}
 <div>
-    <p><img src={{card.image_url}} style="float:left"/></p>
-    <p>
-        <h1>{{card.name}}</h1><br>
-        {% for ability in abilities %}
-        <b>{{ability}}</b><br>
-        {% endfor %}
-        {{card.flavor_text}}
-    </p>
+    <b>Enter a MTG card name to search for(case insensitive):</b>
+    <form method="POST" action=".">
+        <input id="post_form_id" name="card" value="" />
+        <input type="submit">
+    </form>
+    {% if card %}
+        <p><img src={{card.image_url}} style="float:left"/></p>
+        <p>
+            <h1>{{card.name}}</h1><br>
+            {{card.type}}<br>
+            {{card.sub_types}} {{card.power}}/{{card.toughness}}, {{card.cost}}<br><br>
+            {% for ability in abilities %}
+            <b>{{ability}}</b><br>
+            {% endfor %}
+            <br>{{card.flavor_text}}<br>
+            <br>Illus. {{card.illustrator}}
+        </p>
+    {% endif %}
 </div> 
 {% endblock %}
