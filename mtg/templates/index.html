@@ -2,22 +2,49 @@
 {%block content %}
 <div>
     <b>Enter a MTG card name to search for(case insensitive):</b>
-    <form method="POST" action=".">
-        <input id="post_form_id" name="card" value="" />
-        <input type="submit">
-    </form>
-    {% if card %}
-        <p><img src={{card.image_url}} style="float:left"/></p>
-        <p>
-            <h1>{{card.name}}</h1><br>
-            {{card.type}}<br>
-            {{card.sub_types}} {{card.power}}/{{card.toughness}}, {{card.cost}}<br><br>
-            {% for ability in abilities %}
-            <b>{{ability}}</b><br>
-            {% endfor %}
-            <br>{{card.flavor_text}}<br>
-            <br>Illus. {{card.illustrator}}
-        </p>
-    {% endif %}
+    <script type=text/javascript>
+    $(function() {
+        $('#submit').on('click', function() {
+            $.getJSON($SCRIPT_ROOT + "/_get_card", {
+                cardname: $('input[name="cardname"]').val()
+            }).done(function(data) {
+                $("#card-data").remove();
+                if(data.found) {
+                    var card = '<div id="card-data">'+
+                               '<p><img src='+data.image_url+' style="float:left"/></p>'+
+                               '<p>'+
+                                    '<h1>'+data.name+'</h1><br>'
+                                    +data.type+'<br>';
+                                    if(data.sub_types) {
+                                       card+=data.sub_types+' ';
+                                    }
+                                    if(data.power) {
+                                        card+=data.power+'/';
+                                    }
+                                    if(data.toughness) {
+                                        card+=data.toughness+', ';
+                                    }
+                                    if(data.cost) {
+                                        card+=data.cost;
+                                    }
+                                    card+='<br><br>';
+                                    for(i in data.abilities)
+                                    {
+                                        card+=data.abilities[i]+'<br>';
+                                    }
+                                    card+=data.flavor_text+'<br><br>';
+                                    card+='Illus. '+data.illustrator;
+                                    card+='</p></div>';
+                          } else {
+                              var card = '<div id="card-data"><h1>Card not found!</h1></div>';
+                          }
+                $('body').append(card);
+            });
+        });
+        return false;
+    });
+    </script>
+    <p><input type=text name=cardname>
+    <p><a href=# id=submit>Submit</a>
 </div> 
 {% endblock %}

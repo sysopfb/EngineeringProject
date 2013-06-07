@@ -14,6 +14,10 @@
     <![endif]-->
 </head>
 <body>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type=text/javascript>
+        $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+    </script>
     {% block content %}{% endblock %}
 </body>
 </html>

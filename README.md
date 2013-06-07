@@ -53,4 +53,4 @@ Requirements
 * Flask 0.9
 * SQLAlchemy 0.8.1
 * Flask-SQLAlchemy 0.16
-
+* jQuery 1.10.1

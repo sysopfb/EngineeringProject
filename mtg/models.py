@@ -33,6 +33,19 @@ class Card(DeclarativeBase):
     #relation definitions
     editions = db.relation('Edition', primaryjoin='Card.edition_id==Edition.id')
 
+    def to_json(self):
+        return dict(name=self.name,
+                        type=self.type,
+                        abilities=eval(self.abilities),
+                        illustrator=self.illustrator,
+                        power=self.power,
+                        toughness=self.toughness,
+                        flavor_text=self.flavor_text,
+                        cost=self.cost,
+                        image_url=self.image_url,
+                        sub_types=self.sub_types,
+                        found=True)
+
 
 class Edition(DeclarativeBase):
     __tablename__ = 'editions'
