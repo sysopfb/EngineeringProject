@@ -10,6 +10,7 @@ from mtg import app, db
 # Import needed database model(s)
 from models import Card
 
+from flask.views import MethodView
 
 # Routing for the server.
 @app.route("/_get_card")

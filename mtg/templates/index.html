@@ -2,49 +2,28 @@
 {%block content %}
 <div>
     <b>Enter a MTG card name to search for(case insensitive):</b>
-    <script type=text/javascript>
-    $(function() {
-        $('#submit').on('click', function() {
-            $.getJSON($SCRIPT_ROOT + "/_get_card", {
-                cardname: $('input[name="cardname"]').val()
-            }).done(function(data) {
-                $("#card-data").remove();
-                if(data.found) {
-                    var card = '<div id="card-data">'+
-                               '<p><img src='+data.image_url+' style="float:left"/></p>'+
-                               '<p>'+
-                                    '<h1>'+data.name+'</h1><br>'
-                                    +data.type+'<br>';
-                                    if(data.sub_types) {
-                                       card+=data.sub_types+' ';
-                                    }
-                                    if(data.power) {
-                                        card+=data.power+'/';
-                                    }
-                                    if(data.toughness) {
-                                        card+=data.toughness+', ';
-                                    }
-                                    if(data.cost) {
-                                        card+=data.cost;
-                                    }
-                                    card+='<br><br>';
-                                    for(i in data.abilities)
-                                    {
-                                        card+=data.abilities[i]+'<br>';
-                                    }
-                                    card+=data.flavor_text+'<br><br>';
-                                    card+='Illus. '+data.illustrator;
-                                    card+='</p></div>';
-                          } else {
-                              var card = '<div id="card-data"><h1>Card not found!</h1></div>';
-                          }
-                $('body').append(card);
-            });
-        });
-        return false;
-    });
+    <div class="input-stuff">
+        <input type="text" id="search_card">
+        <button type="button" id="SearchButton">Search</button>
+    </div>
+    <script src="{{url_for('static', filename='card.js')}}"></script>
+    <script type="text/template" id="card-template">
+        <img src=<%- url %> style="float:left"/>
+        <h1><%- name %></h1><br>
+        <%- type %><br>
+        <p><%- sub_type %> <%- power %>/<%- toughness %>, <%- cost %></p><br><br>
+        <ul id="abilities">
+            <% _.each(abilities, function(name) {
+                %> <li><%= name %></li> <%
+            }); %>
+        </ul><br>
+        <%- flavor_text %><br><br>
+        Illus. <%- illustrator %>
     </script>
-    <p><input type=text name=cardname>
-    <p><a href=# id=submit>Submit</a>
+    <div id="card">
+    </div>
+    <div id="notfoundmsg">
+        <p>Card Not Found</p>
+    </div>
 </div> 
 {% endblock %}

@@ -54,3 +54,4 @@ Requirements
 * SQLAlchemy 0.8.1
 * Flask-SQLAlchemy 0.16
 * jQuery 1.10.1
+* Underscore.js 1.4.4
