@@ -55,3 +55,7 @@ Requirements
 * Flask-SQLAlchemy 0.16
 * jQuery 1.10.1
 * Underscore.js 1.4.4
+
+Attribution
+-------------
+Images used for this webpage from the [MagicTheGathering wiki](https://mtg.wikia.com) at [Wikia] (https://www.wikia.com) and is licensed under the [Creative Commons Attribution-Share Alike License] (https://http://creativecommons.org/licenses/by-sa/3.0/).
