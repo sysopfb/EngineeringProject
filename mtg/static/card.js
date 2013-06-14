@@ -14,7 +14,7 @@ $(function() {
                     _.defaults(data, {sub_types : "", power : "", toughness : "", cost : "", abilities : "", flavor_text : ""});
                     //This changes the cost values into {} style
                     // for ease of conversion later
-                    var newCOST = data.cost.replace(/(.+?)/g, '{$1}');
+                    var newCOST = data.cost.replace(/([0-9]+)|(.+?)/g, '{$1}');
                     $('#card').html(cardTemplate({url: data.image_url, name: data.name, type: data.type,
                                                   sub_type: data.sub_types, power: data.power, toughness: data.toughness,
                                                   cost: newCOST, abilities: data.abilities, flavor_text: data.flavor_text,
